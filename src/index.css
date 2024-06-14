@@ -1,0 +1,124 @@
+body {
+  font-family: Arial;
+  background-color: white;
+  color: white;
+}
+
+p {
+  font-size: 18px;
+  display: block;
+  color: black;
+}
+
+a {
+  margin-top: 18px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.title {
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  display: inline;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.calc-btn {
+  display: block;
+  margin-top: 16px;
+  background-color: hsl(0, 0%, 0%);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.calc-btn:hover {
+  background-color: hsl(0, 0%, 10%);
+}
+
+.calc-btn:active {
+  background-color: hsl(0, 0%, 20%);
+}
+
+.light body{
+  background-color: rgb(25, 25, 25);
+}
+
+.light .calc-btn{
+  background-color: hsl(192, 67%, 48%);
+}
+
+.light .calc-btn:hover {
+  background-color: hsl(192, 67%, 38%);
+}
+
+.light .calc-btn:active {
+  background-color: hsl(192, 67%, 28%);
+}
+
+.light .title {
+  font-weight: bold;
+  background-color: hsl(192, 67%, 48%);
+  display: inline;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.light p {
+  color: white;
+}
+
+input {
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+}
+
+.slider-checkbox {
+  display: none;
+}
+
+.slider-label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.slider-label .slider-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.slider-checkbox:checked + .slider-label {
+  background-color: hsl(0, 0%, 30%);
+}
+
+.slider-checkbox:checked + .slider-label .slider-button {
+  transform: translateX(26px);
+}
+
