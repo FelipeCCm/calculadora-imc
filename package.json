@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage" : "http://felipeccm.github.io/calculadora-imc",
+  "homepage": "http://felipeccm.github.io/calculadora-imc",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
