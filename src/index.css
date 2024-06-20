@@ -1,11 +1,10 @@
 body {
   font-family: Arial;
   background-color: white;
-  color: white;
 }
 
 p {
-  font-size: 18px;
+  font-size: 25px;
   display: block;
   color: black;
 }
@@ -20,16 +19,16 @@ a {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  width: 200px;
+  width: 250px;
 }
 
 .title {
   font-weight: bold;
-  background-color: rgb(0, 0, 0);
+  background-color: black;
   display: inline;
   padding: 10px 15px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .calc-btn {
@@ -39,7 +38,7 @@ a {
   border: none;
   color: white;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 23px;
   border-radius: 10px;
   cursor: pointer;
   transition: 0.1s;
@@ -53,39 +52,45 @@ a {
   background-color: hsl(0, 0%, 20%);
 }
 
-.light body{
-  background-color: rgb(25, 25, 25);
+.dark body{
+  background-color: rgba(0, 0, 0, 0.925);
 }
 
-.light .calc-btn{
-  background-color: hsl(192, 67%, 48%);
+.dark .calc-btn{
+  background-color: hsl(209, 95%, 22%);
 }
 
-.light .calc-btn:hover {
-  background-color: hsl(192, 67%, 38%);
+.dark .calc-btn:hover {
+  background-color: hsl(209, 95%, 20%);
 }
 
-.light .calc-btn:active {
-  background-color: hsl(192, 67%, 28%);
+.dark .calc-btn:active {
+  background-color: hsl(209, 95%, 18%);
 }
 
-.light .title {
-  font-weight: bold;
-  background-color: hsl(192, 67%, 48%);
-  display: inline;
-  padding: 10px 15px;
-  border-radius: 10px;
-  font-size: 18px;
+.dark .title {
+  background-color: #03396c;
 }
 
-.light p {
+.dark p {
   color: white;
 }
 
 input {
   padding: 5px;
-  font-size: 15px;
+  font-size: 22px;
   outline: none;
+  background-color: white;
+  color: black;
+  border: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  
+}
+
+.dark input {
+  background-color: white;
+  color: #011f4b;
 }
 
 .slider-checkbox {
@@ -97,7 +102,7 @@ input {
   display: inline-block;
   width: 60px;
   height: 34px;
-  background-color: #ccc;
+  background-color: black;
   border-radius: 34px;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -114,8 +119,13 @@ input {
   transition: transform 0.2s;
 }
 
+.dark .slider-label .slider-button {
+  
+  background-color: white;
+}
+
 .slider-checkbox:checked + .slider-label {
-  background-color: hsl(0, 0%, 30%);
+  background-color: #011f4b;
 }
 
 .slider-checkbox:checked + .slider-label .slider-button {

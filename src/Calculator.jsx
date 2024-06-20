@@ -10,7 +10,7 @@ function Calculator() {
     const [isOn, setIsOn] = useState(false);
     const toggleSwitch = () => {
         setIsOn(!isOn);
-        document.documentElement.classList.toggle('light');
+        document.documentElement.classList.toggle('dark');
       };
 
     function enterKeyDown(e) {
@@ -48,7 +48,7 @@ function Calculator() {
           break;
 
         case calculatedResult > 40.0:
-          message = `Seu IMC é: ${calculatedResult} Classificação: Obesidade grave`;
+          message = `Seu IMC é: ${calculatedResult} Classificação Obesidade grave`;
           break;
       }
       setMessage(message);
