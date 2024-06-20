@@ -6,7 +6,11 @@ body {
 p {
   font-size: 25px;
   display: block;
-  color: black;
+  color: #000000;
+}
+
+.message {
+  font-size: 22px;
 }
 
 a {
@@ -19,7 +23,7 @@ a {
   flex-direction: column;
   text-align: center;
   margin: 0 auto;
-  width: 250px;
+  width: 262px;
 }
 
 .title {

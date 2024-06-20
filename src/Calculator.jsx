@@ -32,23 +32,23 @@ function Calculator() {
       let message = '';
       switch(true) {
         case calculatedResult <= 18.5:
-          message = `Seu IMC é: ${calculatedResult} Classificação Magreza`;        
+          message = `Seu IMC é: ${calculatedResult} Classificação: Magreza`;        
           break;
 
         case calculatedResult > 18.5 && calculatedResult <= 25.0:
-          message = `Seu IMC é: ${calculatedResult} Classificação Normal`;       
+          message = `Seu IMC é: ${calculatedResult} Classificação: Normal`;       
           break;
 
         case calculatedResult > 25.0 && calculatedResult <= 30.0:
-          message = `Seu IMC é: ${calculatedResult} Classificação Sobrepeso`;
+          message = `Seu IMC é: ${calculatedResult} Classificação: Sobrepeso`;
           break;
 
         case calculatedResult > 30.0 && calculatedResult <= 40.0:
-          message = `Seu IMC é: ${calculatedResult} Classificação Obesidade`;
+          message = `Seu IMC é: ${calculatedResult} Classificação: Obesidade`;
           break;
 
         case calculatedResult > 40.0:
-          message = `Seu IMC é: ${calculatedResult} Classificação Obesidade grave`;
+          message = `Seu IMC é: ${calculatedResult} Classificação: Obesidade grave`;
           break;
       }
       setMessage(message);
@@ -89,7 +89,7 @@ function Calculator() {
           Calcular
         </button>
         
-        <p>{message}</p>
+        <p className="message">{message}</p>
       </div>
     </>);
 }
