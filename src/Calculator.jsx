@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Calculator() {
   
@@ -7,12 +7,18 @@ function Calculator() {
     const [result, setResult] = useState(0);
     const [message, setMessage] = useState('');
 
+    const inputRef = useRef(null);
+
     const [isOn, setIsOn] = useState(false);
     const toggleSwitch = () => {
         setIsOn(!isOn);
         document.documentElement.classList.toggle('dark');
       };
 
+    function enterKeyDownCm(e) {
+      e.key === 'Enter' ? inputRef.current.focus() : '';
+    }
+    
     function enterKeyDown(e) {
       e.key === 'Enter' ? imcCalc() : '';
     }
@@ -77,12 +83,12 @@ function Calculator() {
           Altura
         </p>
         <input type='number' placeholder='Centímetros' value={height} 
-          onChange={handleHeightChange} onKeyDown={enterKeyDown} className='jsx-altura-input'></input>
+          onChange={handleHeightChange} onKeyDown={enterKeyDownCm} className='jsx-altura-input'></input>
   
         <p>
           Peso
         </p>
-        <input type='number' placeholder='Quilos' value={weight} 
+        <input ref={inputRef} type='number' placeholder='Quilos' value={weight} 
           onChange={handleWeightChange} onKeyDown={enterKeyDown} className='jsx-peso-input'></input>
   
         <button className="calc-btn" onClick={imcCalc}>
